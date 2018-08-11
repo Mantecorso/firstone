@@ -23,7 +23,7 @@
                 <td>Ver</td>
                 <td>Borrar</td>
             </tr>
-            <tr ng-repeat="user in users">
+            <tr ng-repeat="user in users" class="center">
                 <td>
                     <input type="text" ng-model="user.numero" ng-show="user.editable">
                     <span ng-hide="user.editable">{{ user.numero }}</span>
@@ -43,11 +43,13 @@
                     <span ng-click="save($index)" ng-show="user.editable" class="boton">Save</span>
                 </td>
                 <td>
-                    <span ng-click="delete($index)" class="boton"> | Delete</span>
+                    <span ng-click="delete($index)" class="boton"> Delete</span>
                 </td>
             </tr>
         </table>
-        <span ng-click="add()" class="boton">Add New</span>
+        <div id="ultimo">
+            <span ng-click="add()" class="boton">Add New</span>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
     <script src="app.js"></script>
