@@ -15,7 +15,7 @@
     </header>
     <div ng-controller="simplecrud">
         <table>
-            <tr>
+            <tr class="center">
                 <td>Numero</td>
                 <td>Nombre</td>
                 <td>Pais</td>
@@ -37,17 +37,17 @@
                     <span ng-hide="user.editable">{{ user.pais }}</span>
                 </td>
                 <td>
-                    <span ng-click="edit($index)" ng-hide="profile.editable">Edit</span>
+                    <span ng-click="edit($index)" ng-hide="user.editable" class="boton">Edit</span>
                 </td>
                 <td>
-                    <span ng-click="save($index)" ng-show="profile.editable">Save</span>
+                    <span ng-click="save($index)" ng-show="user.editable" class="boton">Save</span>
                 </td>
                 <td>
-                    <span ng-click="delete($index)"> | Delete</span>
+                    <span ng-click="delete($index)" class="boton"> | Delete</span>
                 </td>
             </tr>
         </table>
-        <span ng-click="add()">Add New</span>
+        <span ng-click="add()" class="boton">Add New</span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
     <script src="app.js"></script>
